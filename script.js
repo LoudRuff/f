@@ -1,28 +1,21 @@
-const nodemailer = require("nodemailer");
-
-// Create transporter using Gmail App Password
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "ayushvarlani778@gmail.com",      // your Gmail
-    pass: "ztwzhqwmggoxnbqn",         // 16-char App Password (NO spaces)
-  },
-});
-
-// Send email
-transporter.sendMail(
-  {
-    from: "ayushvarlani778@gmail.com",
-    to: "dipsite4632@dpsudaipur.com",
-    subject: "Test Email from Node + Nodemailer",
-    text: "Hello! This email is sent using Nodemailer with Gmail App Password.",
-  },
-  (error, info) => {
-    if (error) {
-      console.log("Error:", error);
-    } else {
-      console.log("Email sent successfully ✔");
-      console.log(info.response);
-    }
-  }
-);
+let tween = gsap.from("#h1",{
+     y: 100,
+     opacity:0,
+     duration: 1,
+     repeat:0
+    });
+let tween1 = gsap.from("li",{
+     x: -100,
+     opacity:0,
+     duration: 1.2,
+     delay:2,
+     stagger:0.2,
+     repeat:0
+    });
+let tween2 = gsap.from(".btnpart",{
+     x: 100,
+     opacity:0,
+     duration:1.9,
+     delay:1.2,
+     repeat:0
+})
